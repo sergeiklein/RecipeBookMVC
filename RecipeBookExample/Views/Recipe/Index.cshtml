@@ -1,0 +1,21 @@
+﻿@model IEnumerable<RecipeBookExample.Models.RecipeModel>;
+
+
+<h2>Recipe Index</h2> 
+<body>
+    @foreach(RecipeModel r in Model)
+    {
+        <p>@r.Name</p>
+        <p>@r.Description</p>
+       @* <a href="/AuthorModel/Details/@r.AuthorId>@r.Author.FirstName @r.Author.LastName"</a>*@
+@*        <ul>
+            @foreach(RecipeIngredient i in r.RecipeIngredients)
+            {
+                <li>
+                    <a href="/Ingredient/Details/@i.Ingredient.Id">@i.Ingredient.Name </a>
+                </li>
+            }
+        </ul>*@
+
+    }
+</body>
